@@ -33,11 +33,25 @@ body {
 .slide:last-child{
     border-radius: 0 20px 20px 0;
 }
+.btn {
+    opacity: 0;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    color: #111;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background: #ffffff;
+    border-radius: 100px;
+    /* transition: all 0.4s ease; */
+
+}
 .slide h3 {
     opacity: 0;
     font-weight: 500;
     font-size: 16px;
-    /* bottom: 20px; */ 
     margin: 0;
     position: absolute;
     left: 2px;
@@ -59,13 +73,14 @@ body {
     opacity: 1;
     transition: opacity 0.3s ease-in 0.4s;
 }
-
-/* POINT */
-/* .point-container {
-    display: flex;
+.slide.active .btn{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s, background 0.4s ease, color 0.4s ease;
+    font-size: 30px;
 }
-.point {
-    width: 10px;
-    height: 10px;
-    background: #ffffff;
-} */
+.slide.active .btn:hover{
+    background: #111;
+    color: #ffffff;
+    border-color: #ffffff;
+    transition: background 0.4s ease, color 0.5s ease;
+}
